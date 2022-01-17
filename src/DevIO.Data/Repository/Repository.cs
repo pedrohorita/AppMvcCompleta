@@ -47,7 +47,7 @@ namespace DevIO.Data.Repository
             DbSet.Update(entity);
             await SaveChanges();
         }
-        public async Task Apagar(Guid id)
+        public async Task Remover(Guid id)
         {
             DbSet.Remove(new TEntity { Id = id});
             await SaveChanges();

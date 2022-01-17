@@ -14,7 +14,7 @@ namespace DevIO.Business.Interfaces
         Task<TEntity> ObterPorId(Guid id);
         Task<IEnumerable<TEntity>> ObterTodos();
         Task Atualizar(TEntity entity);
-        Task Apagar(Guid id);
+        Task Remover(Guid id);
         Task<IEnumerable<TEntity>> Buscar(Expression<Func<TEntity, bool>> predicate);
         Task<int> SaveChanges();
     }

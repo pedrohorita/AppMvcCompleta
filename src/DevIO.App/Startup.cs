@@ -29,7 +29,8 @@ namespace DevIO.App
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(
+                options.EnableSensitiveDataLogging()
+                .UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
 

@@ -15,7 +15,9 @@ namespace DevIO.Business.Services
         private readonly IEnderecoRepository _enderecoRepository;
 
         public FornecedorService(IFornecedorRepository fornecedorRepository,
-                                 IEnderecoRepository enderecoRepository                                 ) 
+                                 IEnderecoRepository enderecoRepository,
+                                 INotificador notificador) 
+                                : base(notificador)
         {
             _fornecedorRepository = fornecedorRepository;
             _enderecoRepository = enderecoRepository;
